@@ -499,7 +499,6 @@ footer {
   .thread-row { flex-direction: column; gap: 0.8rem; }
 }
 </style>
-<link rel="apple-touch-icon" sizes="180x180" href="icon_shuttle_180.png">
 </head>
 <body>
 
@@ -784,6 +783,9 @@ footer {
 </footer>
 
 <script>
+// iOSホーム画面起動時にトップに戻す
+if (window.navigator.standalone) { window.scrollTo(0, 0); }
+
 document.querySelectorAll('.fade-in').forEach(el => {
   el.classList.add('will-animate');
 });
